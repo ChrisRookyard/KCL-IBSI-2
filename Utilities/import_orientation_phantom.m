@@ -6,6 +6,10 @@ function import_orientation_phantom()
 %   1. imports the IBSI orientation phantom
 %   2. checks the dimensions of it, and re-arranges them if needed
 %   3. and then checks the values 
+%
+% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
 % 
 % *************************************************************************
 

@@ -1,5 +1,25 @@
 function imageFiltered = filter_Simoncelli_3D(image,level)
 
+% *************************************************************************
+% FILTER_SIMONCELLI_3D: 3D Simoncelli filtering
+% *************************************************************************
+%
+% INPUTS
+%
+%   image, the image to be filtered
+%
+%   level, the level to which the filtering should be performed
+%
+% OUTPUTS
+%
+%   imageFiltered, the filtered image
+%
+% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
+% 
+% *************************************************************************
+
 % original image size
 imDims = size(image);
 

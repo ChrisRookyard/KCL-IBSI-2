@@ -15,6 +15,10 @@ function imageFiltered = filter_mean_2D(image,filterSize,padType)
 %   as the input image
 %
 % *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
+% 
+% *************************************************************************
 
 % check dimension of filterSize
 if length(filterSize) ~= 2

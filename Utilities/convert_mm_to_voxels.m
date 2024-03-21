@@ -12,8 +12,12 @@ function voxelUnits = convert_mm_to_voxels(voxelDims,mmValues)
 %   3. then, it is assumed that the user wants a voxel-unit value for each
 %   dimension, so the output, "voxelUnits", is of the same length as the
 %   inputs
+%
+%% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
 % 
-% *************************************************************************
+%% ************************************************************************
 
 % check the length of the inputs matches
 if length(voxelDims) ~= length(mmValues)

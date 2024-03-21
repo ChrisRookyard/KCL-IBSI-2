@@ -11,6 +11,10 @@ function filterSize = calculate_LoG_filter_size(sigmaVoxels,cutoff)
 %   and in voxel units.
 %   5. the IBSI-specified calculation ensures that the size of the filter
 %   will always be of odd integer values.
+%
+% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
 % 
 % *************************************************************************
 

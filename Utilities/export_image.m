@@ -3,7 +3,7 @@ function export_image(image,info,filename,saveDir)
 % *************************************************************************
 % 
 % export_image: 
-%   1. exports image, with metadata info, to file filename
+%   1. exports a NIfTI image, with metadata info, to file filename
 %   2. it is assumed that the metadata to write are:
 %       Datatype
 %       PixelDimensions
@@ -18,7 +18,11 @@ function export_image(image,info,filename,saveDir)
 %       PhaseDimension
 %       SpatialDimension
 %   3. the image is saved compressed
-%   4. user is asked where to save
+%   4. user is asked where to save unless saveDir is specified
+%
+% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
 % 
 % *************************************************************************
 

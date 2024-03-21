@@ -12,6 +12,10 @@ function padArg = padding_argument(padType)
 %   'circular, or 'symmetric' in Matlab's terms
 % 
 % *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
+% 
+% *************************************************************************
 
 % return padding argument in padArg, depending on which case is in padType
 switch padType

@@ -8,6 +8,10 @@ function [image,info] = import_image(varargin)
 %   1st, to match IBSI specification)
 %   3. converts the data type to double precision floating point
 %   4. then returns the image to the workspace 
+%
+% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
 % 
 % *************************************************************************
 

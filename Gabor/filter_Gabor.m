@@ -20,6 +20,10 @@ function [imageFiltered,g] = filter_Gabor...
 %   length one, with one image, the single response map, within it.  If
 %   rotationally-invariant, then we have a 4-by-1 cell, with the orthogonal
 %   response maps (3 of them), and the pooled rotationally-invariant map.
+%
+% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
 % 
 % *************************************************************************
 

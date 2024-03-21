@@ -1,5 +1,26 @@
 function intensityStats = calculate_intensity_stats(image,mask)
 
+% *************************************************************************
+% CALCULATE_INTENSITY_STATS: calculates intensity-based statistics
+% *************************************************************************
+%
+% INPUTS
+%
+%   image, the image to be analysed
+%
+%   mask, a binary mask to specify the region of interest
+%
+% OUTPUTS
+%
+%   intensity stats, the statistics as specified by IBSI for benchmarking
+%   in chapter 2, phase 2. 
+%
+% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
+% 
+% *************************************************************************
+
 % get the voxels from the image
 inVox = image(logical(mask));
 

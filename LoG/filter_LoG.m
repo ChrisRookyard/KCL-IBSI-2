@@ -22,6 +22,10 @@ function imageFiltered = filter_LoG(image,sigma,voxelDims,cutoff,padType)
 %   either "zero", "nearest", "periodic", or "mirror", as specified by IBSI
 %   8. the filtered image, "imageFiltered" will be returned, the same size
 %   as the input image
+%
+% *************************************************************************
+%
+% By Chris Rookyard, Cancer Imaging Dept., King's College London
 % 
 % *************************************************************************
 
