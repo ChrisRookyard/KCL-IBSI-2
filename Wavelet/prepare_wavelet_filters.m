@@ -1,7 +1,7 @@
-function waveletFilters = prepare_wavelet_filters(waveletType,level,dim)
+function waveletFilters = prepare_wavelet_filters(waveletType,level)
 
 % *************************************************************************
-% PREPARE_WAVELET_FILTERS: returns a cell array of wavelet filters
+% PREPARE_WAVELET_FILTERS: returns a cell array of wavelet filters in 3D
 % *************************************************************************
 %
 % INPUTS
@@ -10,34 +10,26 @@ function waveletFilters = prepare_wavelet_filters(waveletType,level,dim)
 %
 %   level - and the level to go to
 %
-%   dim - 2 for 2D, 3 for 3D
-%
 % OUTPUTS
 %
 %   waveletFilters, i-by-1 cell array, where i is the level, and in each
-%   entry, if 2D:
-%
-%       a cell with an entry for each combination of filters (4), and each 
-%       entry for that will be 3-D, with the rotations going along the 3rd 
-%       dimension within each cell entry.
-%
-%   and if 3D:
-%
+%   entry:
 %       a cell with an entry for each combination of filters(8), and each 
 %       entry for that will be 4-D, with the rotations going along the 4th 
 %       dimension within each cell entry.
+%
+% NOTE
+%
+%   this function is used to make producing 3D kernels a one-off, since it
+%   takes a while. For 2D, the filters do not need to be produced in
+%   advance, and the "filter_undecimated_separable_wavelet_2D" function can
+%   be called with the waveletType.
 %
 % *************************************************************************
 %
 % By Chris Rookyard, Cancer Imaging Dept., King's College London
 % 
 % *************************************************************************
-
-
-% check dimensionality argument
-if ~(dim == 2 || dim == 3)
-    error('Incorrect dimensionality input')
-end
 
 % filter kernels
 [Fa,Fd] = wfilters(waveletType,'d');
@@ -76,9 +68,5 @@ for i = 1:level
     end
     
     % send these to the filter calculator
-    if dim == 2
-        waveletFilters{i} = combine_wavelet_kernels_2D(fa,fd);
-    elseif dim == 3
-        waveletFilters{i} = combine_wavelet_kernels_3D(fa,fd);
-    end
+    waveletFilters{i} = combine_wavelet_kernels_3D(fa,fd);
 end

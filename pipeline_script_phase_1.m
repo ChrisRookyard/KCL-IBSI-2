@@ -365,7 +365,6 @@ waveletType = 'db2';
 waveletCombination = {'LHL'};
 level = 1;
 padType = 'zero';
-dim = 3;
 poolType = 'mean';
 
 % message as a reminder for current phantom type
@@ -377,7 +376,7 @@ uiwait(msg)
 [image,info] = import_image();
 
 % get the wavelet filters
-waveletFilters = prepare_wavelet_filters(waveletType,level,dim);
+waveletFilters = prepare_wavelet_filters(waveletType,level);
 
 % get the filtered image
 imageFiltered = filter_undecimated_separable_wavelet_3D...
@@ -404,7 +403,6 @@ waveletType = 'coif1';
 waveletCombination = {'HHL'};
 level = 1;
 padType = 'periodic';
-dim = 3;
 poolType = 'mean';
 
 % message as a reminder for current phantom type
@@ -416,7 +414,7 @@ uiwait(msg)
 [image,info] = import_image();
 
 % get the wavelet filters
-waveletFilters = prepare_wavelet_filters(waveletType,level,dim);
+waveletFilters = prepare_wavelet_filters(waveletType,level);
 
 % get the filtered image
 imageFiltered = filter_undecimated_separable_wavelet_3D...
@@ -444,7 +442,6 @@ waveletType = 'haar';
 waveletCombination = {{'LLL','LLL'},{'LLL','HHH'}};
 level = 2;
 padType = 'mirror';
-dim = 3;
 poolType = 'mean';
 
 % filenames to save to
@@ -459,7 +456,7 @@ uiwait(msg)
 [image,info] = import_image();
 
 % get the wavelet filters
-waveletFilters = prepare_wavelet_filters(waveletType,level,dim);
+waveletFilters = prepare_wavelet_filters(waveletType,level);
 
 for i = 1:length(waveletCombination)
 
